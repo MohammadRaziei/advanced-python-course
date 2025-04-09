@@ -84,7 +84,7 @@ export default function AdvancedPythonCourse() {
             <a href="#purchase" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700">
               Enroll Now
             </a>
-            <a href="https://github.com/your-repo" target="_blank" rel="noopener" className="bg-gray-800 text-white px-8 py-3 rounded-lg hover:bg-gray-900">
+            <a href="https://github.com/MohammadRaziei/advanced-python-course" target="_blank" rel="noopener" className="bg-gray-800 text-white px-8 py-3 rounded-lg hover:bg-gray-900">
               <FontAwesomeIcon icon={faGithub} className="mr-2" />
               View Code
             </a>
