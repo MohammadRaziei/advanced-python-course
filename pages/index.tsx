@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faTrophy, faLightbulb, faBook, faRobot, faCube, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { handlePath } from '../utils/path';
 
 const syllabus = [
   {
@@ -295,7 +296,7 @@ export default function AdvancedPythonCourse() {
                               <li key={index} className="flex items-center mb-2">
                                 <a href={notebook.url} className="text-blue-600 hover:underline" target="_blank" rel="noopener">
                                   <img 
-                                    src="/icons/jupyter.svg" 
+                                    src={ handlePath("/icons/jupyter.svg") }
                                     alt="Jupyter Notebook" 
                                     className="w-4 h-4 inline-block mr-2"
                                   />
