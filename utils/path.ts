@@ -12,6 +12,6 @@ export const handlePath = (path: string): string => {
   }
   
   // Otherwise, prepend the environment prefix path
-  const prefixPath = process.env.PREFIX_PATH || '';
+  const prefixPath = process.env.prefixPath || '';
   return `${prefixPath}${path}`;
 };

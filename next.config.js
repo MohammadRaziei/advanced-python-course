@@ -1,5 +1,8 @@
 module.exports = {
   // output: 'export',
+  env: {
+		prefixPath: process.env.PREFIX_PATH || '',
+	},
   publicRuntimeConfig: {
     site: {
       name: 'Next.js + Tailwind CSS template',
