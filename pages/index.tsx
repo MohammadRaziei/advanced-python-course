@@ -205,8 +205,13 @@ export default function AdvancedPythonCourse() {
       <nav className="bg-white shadow-lg fixed w-full z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16 items-center">
-            <Link href="/" className="flex-shrink-0 text-xl font-bold text-blue-600">
-              Python Pro
+            <Link href="/" className="flex-shrink-0 flex items-center">
+              <img 
+                src='https://raw.githubusercontent.com/MohammadRaziei/mohammadraziei.github.io/main/src/images/logo.svg' 
+                alt="Python Pro Logo" 
+                className="h-8 w-auto"
+              />
+              <span className="ml-2 text-xl font-bold text-blue-600">Python Pro</span>
             </Link>
             <div className="hidden md:flex space-x-8">
               <Link href="#syllabus" className="text-gray-700 hover:text-blue-600">Syllabus</Link>
