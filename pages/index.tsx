@@ -17,7 +17,7 @@ const syllabus = [
       "Key libraries landscape"
     ],
     resources: {
-      code: "https://github.com/your-repo/module1",
+      code: "https://github.com/MohammadRaziei/advanced-python-course/module1",
       notebooks: [
         { name: "Python Basics", url: "https://notebooks.com/python-basics" },
         { name: "AI Impact Analysis", url: "https://notebooks.com/ai-impact" }
@@ -30,20 +30,146 @@ const syllabus = [
     icon: faCube,
     topics: [
       "AI: TensorFlow, PyTorch, Lightning",
-      "Vision: OpenCV, PIL",
+      "Vision: OpenCV, PIL, TorchVision",
       "Audio: Librosa, TorchAudio",
-      "NLP: SpaCy, Selectolax",
+      "NLP: SpaCy, Selectolax, BeautifulSoup, LXML",
       "Optimization: CVXPY"
     ],
     resources: {
-      code: "https://github.com/your-repo/module2",
+      code: "https://github.com/MohammadRaziei/advanced-python-course/module2",
       notebooks: [
         { name: "TensorFlow Basics", url: "https://notebooks.com/tf-basics" },
         { name: "OpenCV Tutorial", url: "https://notebooks.com/opencv" }
       ]
     }
   },
-  // ... Add other syllabus items following the same pattern
+  {
+    id: 3,
+    title: "Object-Oriented Programming in Python",
+    icon: faCode,
+    topics: [
+      "OOP concepts in Python and class creation",
+      "Inheritance and polymorphism",
+      "Built-in methods like operators",
+      "Static methods",
+      "Properties and OOP applications"
+    ],
+    resources: {
+      code: "https://github.com/MohammadRaziei/advanced-python-course/module3",
+      notebooks: [
+        { name: "OOP Basics", url: "https://notebooks.com/oop-basics" },
+        { name: "Inheritance & Polymorphism", url: "https://notebooks.com/inheritance" }
+      ]
+    }
+  },
+  {
+    id: 4,
+    title: "Python Decorators",
+    icon: faBook,
+    topics: [
+      "Introduction to decorators",
+      "Function and class decorators",
+      "Simple decorators",
+      "Advanced decorators",
+      "Practical decorator applications"
+    ],
+    resources: {
+      code: "https://github.com/MohammadRaziei/advanced-python-course/module4",
+      notebooks: [
+        { name: "Basic Decorators", url: "https://notebooks.com/basic-decorators" },
+        { name: "Advanced Decorators", url: "https://notebooks.com/advanced-decorators" }
+      ]
+    }
+  },
+  {
+    id: 5,
+    title: "Type Annotations",
+    icon: faLightbulb,
+    topics: [
+      "Typing and checkguard libraries",
+      "Pydantic library"
+    ],
+    resources: {
+      code: "https://github.com/MohammadRaziei/advanced-python-course/module5",
+      notebooks: [
+        { name: "Typing System", url: "https://notebooks.com/typing-system" },
+        { name: "Working with Pydantic", url: "https://notebooks.com/pydantic" }
+      ]
+    }
+  },
+  {
+    id: 6,
+    title: "Functional Programming",
+    icon: faRobot,
+    topics: [
+      "Functional programming concepts",
+      "List comprehensions",
+      "Generators",
+      "Lambda functions",
+      "List, map, and filter functions"
+    ],
+    resources: {
+      code: "https://github.com/MohammadRaziei/advanced-python-course/module6",
+      notebooks: [
+        { name: "Functional Programming", url: "https://notebooks.com/functional" },
+        { name: "Generators", url: "https://notebooks.com/generators" }
+      ]
+    }
+  },
+  {
+    id: 7,
+    title: "Python Modules and Project Structure",
+    icon: faTrophy,
+    topics: [
+      "Clean architecture and proper file organization",
+      "Introduction to setup.py and pyproject",
+      "Linters",
+      "Hatch and setuptools",
+      "Build process and wheel files",
+      "Pip-tools library",
+      "Testing with unittest and pytest"
+    ],
+    resources: {
+      code: "https://github.com/MohammadRaziei/advanced-python-course/module7",
+      notebooks: [
+        { name: "Project Structure", url: "https://notebooks.com/project-structure" },
+        { name: "Testing", url: "https://notebooks.com/testing" }
+      ]
+    }
+  },
+  {
+    id: 8,
+    title: "Design Patterns",
+    icon: faCube,
+    topics: [
+      "Singleton pattern",
+      "Logging library",
+      "Factory pattern"
+    ],
+    resources: {
+      code: "https://github.com/MohammadRaziei/advanced-python-course/module8",
+      notebooks: [
+        { name: "Design Patterns", url: "https://notebooks.com/design-patterns" },
+        { name: "Singleton & Factory", url: "https://notebooks.com/singleton-factory" }
+      ]
+    }
+  },
+  {
+    id: 9,
+    title: "Web Services",
+    icon: faCode,
+    topics: [
+      "Flask, FastAPI, and Uvicorn",
+      "Gradio library"
+    ],
+    resources: {
+      code: "https://github.com/MohammadRaziei/advanced-python-course/module9",
+      notebooks: [
+        { name: "FastAPI Web Services", url: "https://notebooks.com/fastapi" },
+        { name: "Gradio UI", url: "https://notebooks.com/gradio" }
+      ]
+    }
+  }
 ];
 
 
