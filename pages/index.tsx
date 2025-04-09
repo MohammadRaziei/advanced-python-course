@@ -46,6 +46,26 @@ const syllabus = [
   // ... Add other syllabus items following the same pattern
 ];
 
+
+const features = [
+  {
+    icon: faLightbulb,
+    title: "Modern Curriculum",
+    description: "Covering latest Python 3.11+ features and AI ecosystem tooling"
+  },
+  {
+    icon: faTrophy,
+    title: "Expert Instruction",
+    description: "Industry professionals with real-world experience"
+  },
+  {
+    icon: faCode,
+    title: "Hands-on Projects",
+    description: "Practical exercises and real-world implementations"
+  }
+];
+
+
 export default function AdvancedPythonCourse() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -93,19 +113,21 @@ export default function AdvancedPythonCourse() {
       </section>
 
       {/* Why Choose Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Why This Course?</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-6 bg-gray-50 rounded-lg">
-              <FontAwesomeIcon icon={faLightbulb} className="text-blue-600 text-3xl mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Modern Curriculum</h3>
-              <p>Covering latest Python 3.11+ features and AI ecosystem tooling</p>
+      
+          <section className="py-20 bg-white">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 className="text-3xl font-bold text-center mb-12">Why This Course?</h2>
+              <div className="grid md:grid-cols-3 gap-8">
+                {features.map((feature: any, index: number) => (
+                  <div key={index} className="p-6 bg-gray-50 rounded-lg">
+                    <FontAwesomeIcon icon={feature.icon} className="text-blue-600 text-3xl mb-4" />
+                    <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                    <p>{feature.description}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-            {/* Add more features */}
-          </div>
-        </div>
-      </section>
+          </section>
 
       {/* Syllabus Section */}
       <section id="syllabus" className="py-20">
@@ -168,7 +190,7 @@ export default function AdvancedPythonCourse() {
       </section>
 
       {/* Resources Section */}
-      <section id="resources" className="py-20 bg-gray-100">
+      {/* <section id="resources" className="py-20 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center mb-12">Course Resources</h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -178,17 +200,16 @@ export default function AdvancedPythonCourse() {
                 View Interactive Notebooks →
               </a>
             </div>
-            {/* Add more resource blocks */}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="mb-4">© 2024 Python Pro Masterclass. All rights reserved.</p>
           <div className="flex justify-center space-x-6">
-            <a href="https://github.com/your-repo" target="_blank" rel="noopener">
+            <a href="https://github.com/MohammadRaziei/advanced-python-course" target="_blank" rel="noopener">
               <FontAwesomeIcon icon={faGithub} className="text-2xl hover:text-gray-300" />
             </a>
             {/* Add more social links */}
