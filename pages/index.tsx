@@ -5,6 +5,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faTrophy, faLightbulb, faBook, faRobot, faCube, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { handlePath } from '../utils/path';
+import { convertToNbviewerUrl } from 'utils/urlConverter';
+
+
+const repo_url = "https://github.com/MohammadRaziei/advanced-python-course"
+function repoPath(path: string, branch: string = "master"): string {
+  return repo_url + "/tree/" + branch + "/" + path;
+}
+function notebookPath(path:string, branch: string = "master"): string {
+  return convertToNbviewerUrl(repoPath(path, branch));
+}
+
 
 const syllabus = [
   {
@@ -56,10 +67,10 @@ const syllabus = [
       "Properties and OOP applications"
     ],
     resources: {
-      code: "https://github.com/MohammadRaziei/advanced-python-course/module3",
+      code: repoPath("3-object-oriented-programming"),
       notebooks: [
-        { name: "OOP Basics", url: "https://notebooks.com/oop-basics" },
-        { name: "Inheritance & Polymorphism", url: "https://notebooks.com/inheritance" }
+        { name: "OOP Basics", url: notebookPath("3-object-oriented-programming/i-oop-basic.ipynb") },
+        { name: "OOP Advanced", url: notebookPath("3-object-oriented-programming/ii-oop-advanced.ipynb") }
       ]
     }
   },
@@ -236,7 +247,7 @@ export default function AdvancedPythonCourse() {
             <a href="#purchase" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700">
               Enroll Now
             </a>
-            <a href="https://github.com/MohammadRaziei/advanced-python-course" target="_blank" rel="noopener" className="bg-gray-800 text-white px-8 py-3 rounded-lg hover:bg-gray-900">
+            <a href={repo_url} target="_blank" rel="noopener" className="bg-gray-800 text-white px-8 py-3 rounded-lg hover:bg-gray-900">
               <FontAwesomeIcon icon={faGithub} className="mr-2" />
               View Code
             </a>
@@ -341,7 +352,7 @@ export default function AdvancedPythonCourse() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="mb-4">© 2024 Python Pro Masterclass. All rights reserved.</p>
           <div className="flex justify-center space-x-6">
-            <a href="https://github.com/MohammadRaziei/advanced-python-course" target="_blank" rel="noopener">
+            <a href={repo_url} target="_blank" rel="noopener">
               <FontAwesomeIcon icon={faGithub} className="text-2xl hover:text-gray-300" />
             </a>
             {/* Add more social links */}
