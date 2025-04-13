@@ -40,17 +40,20 @@ const syllabus = [
     title: "Core Python Libraries",
     icon: faCube,
     topics: [
-      "AI: TensorFlow, PyTorch, Lightning",
-      "Vision: OpenCV, PIL, TorchVision",
-      "Audio: Librosa, TorchAudio",
-      "NLP: SpaCy, Selectolax, BeautifulSoup, LXML",
-      "Optimization: CVXPY"
+      "AI: TensorFlow, PyTorch",
+      "Optimization: CVXPY",
+      "Vision: OpenCV, PIL",
+      "Audio: Librosa",
+      "NLP and Parsers: Hazm, Selectolax"
     ],
     resources: {
-      code: "https://github.com/MohammadRaziei/advanced-python-course/module2",
+      code: repoPath("2-python-libraries"),
       notebooks: [
-        { name: "TensorFlow Basics", url: "https://notebooks.com/tf-basics" },
-        { name: "OpenCV Tutorial", url: "https://notebooks.com/opencv" }
+        { name: "AI Frameworks", url: notebookPath("2-python-libraries/i-ai-frameworks.ipynb") },
+        { name: "Visualization In Python", url: notebookPath("2-python-libraries/ii-visualization.ipynb") },
+        { name: "Audio Processing", url: notebookPath("2-python-libraries/iii-audio-processing.ipynb") },
+        { name: "NLP and Parsers", url: notebookPath("2-python-libraries/iv-nlp-and-parsers.ipynb") },
+        { name: "Image Processing", url: notebookPath("2-python-libraries/v-image-processing.ipynb") }
       ]
     }
   },
