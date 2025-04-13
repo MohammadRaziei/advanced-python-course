@@ -29,10 +29,9 @@ const syllabus = [
       "Key libraries landscape"
     ],
     resources: {
-      code: "https://github.com/MohammadRaziei/advanced-python-course/module1",
+      code: repoPath("1-why-python"),
       notebooks: [
-        { name: "Python Basics", url: "https://notebooks.com/python-basics" },
-        { name: "AI Impact Analysis", url: "https://notebooks.com/ai-impact" }
+        { name: "Why Python?", url: notebookPath("1-why-python/why-python.ipynb") },
       ]
     }
   },
@@ -86,9 +85,9 @@ const syllabus = [
       "Practical decorator applications"
     ],
     resources: {
-      code: "https://github.com/MohammadRaziei/advanced-python-course/module4",
+      code: repoPath("4-python-decorators"),
       notebooks: [
-        { name: "Basic Decorators", url: "https://notebooks.com/basic-decorators" },
+        { name: "Basic Decorators", url: notebookPath("4-python-decorators/i-decorator-basics.ipynb") },
         { name: "Advanced Decorators", url: "https://notebooks.com/advanced-decorators" }
       ]
     }
