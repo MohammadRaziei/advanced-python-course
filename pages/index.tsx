@@ -29,6 +29,7 @@ const syllabus = [
       "Key libraries landscape"
     ],
     resources: {
+      enroll_needed: false,
       code: repoPath("1-why-python"),
       notebooks: [
         { name: "Why Python?", url: notebookPath("1-why-python/why-python.ipynb") },
@@ -47,6 +48,7 @@ const syllabus = [
       "NLP and Parsers: Hazm, Selectolax"
     ],
     resources: {
+      enroll_needed: false,
       code: repoPath("2-python-libraries"),
       notebooks: [
         { name: "AI Frameworks", url: notebookPath("2-python-libraries/i-ai-frameworks.ipynb") },
@@ -69,6 +71,7 @@ const syllabus = [
       "Properties and OOP applications"
     ],
     resources: {
+      enroll_needed: false,
       code: repoPath("3-object-oriented-programming"),
       notebooks: [
         { name: "OOP Basics", url: notebookPath("3-object-oriented-programming/i-oop-basic.ipynb") },
@@ -88,6 +91,7 @@ const syllabus = [
       "Practical decorator applications"
     ],
     resources: {
+      enroll_needed: false,
       code: repoPath("4-python-decorators"),
       notebooks: [
         { name: "Basic Decorators", url: notebookPath("4-python-decorators/i-decorator-basics.ipynb") },
@@ -104,6 +108,7 @@ const syllabus = [
       "Pydantic library"
     ],
     resources: {
+      enroll_needed: true,
       code: "https://github.com/MohammadRaziei/advanced-python-course/module5",
       notebooks: [
         { name: "Typing System", url: "https://notebooks.com/typing-system" },
@@ -123,6 +128,7 @@ const syllabus = [
       "List, map, and filter functions"
     ],
     resources: {
+      enroll_needed: true,
       code: "https://github.com/MohammadRaziei/advanced-python-course/module6",
       notebooks: [
         { name: "Functional Programming", url: "https://notebooks.com/functional" },
@@ -144,6 +150,7 @@ const syllabus = [
       "Testing with unittest and pytest"
     ],
     resources: {
+      enroll_needed: true,
       code: "https://github.com/MohammadRaziei/advanced-python-course/module7",
       notebooks: [
         { name: "Project Structure", url: "https://notebooks.com/project-structure" },
@@ -161,6 +168,7 @@ const syllabus = [
       "Factory pattern"
     ],
     resources: {
+      enroll_needed: true,
       code: "https://github.com/MohammadRaziei/advanced-python-course/module8",
       notebooks: [
         { name: "Design Patterns", url: "https://notebooks.com/design-patterns" },
@@ -177,6 +185,7 @@ const syllabus = [
       "Gradio library"
     ],
     resources: {
+      enroll_needed: true,
       code: "https://github.com/MohammadRaziei/advanced-python-course/module9",
       notebooks: [
         { name: "FastAPI Web Services", url: "https://notebooks.com/fastapi" },
@@ -303,23 +312,51 @@ export default function AdvancedPythonCourse() {
                     </td>
                     <td className="px-6 py-4">
                       <div className="flex flex-col space-y-2">
-                        <a href={module.resources.code} className="text-blue-600 hover:underline" target="_blank" rel="noopener">
-                          <FontAwesomeIcon icon={faGithub} className="mr-2" />
-                          Source Code
-                        </a>
+                        {module.resources.enroll_needed ? (
+                          <div className="relative group">
+                            <span className="text-gray-400 cursor-not-allowed">
+                              <FontAwesomeIcon icon={faGithub} className="mr-2" />
+                              Source Code
+                            </span>
+                            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-800 text-white text-sm rounded p-2 whitespace-nowrap z-10">
+                              Please enroll in the course to access this resource
+                            </div>
+                          </div>
+                        ) : (
+                          <a href={module.resources.code} className="text-blue-600 hover:underline" target="_blank" rel="noopener">
+                            <FontAwesomeIcon icon={faGithub} className="mr-2" />
+                            Source Code
+                          </a>
+                        )}
                         <div className="mt-2">
                           <span className="font-medium">Notebooks:</span>
                           <ul className="list-disc pl-6 mt-1">
                             {module.resources.notebooks.map((notebook, index) => (
                               <li key={index} className="flex items-center mb-2">
-                                <a href={notebook.url} className="text-blue-600 hover:underline" target="_blank" rel="noopener">
-                                  <img 
-                                    src={ handlePath("/icons/jupyter.svg") }
-                                    alt="Jupyter Notebook" 
-                                    className="w-4 h-4 inline-block mr-2"
-                                  />
-                                  {notebook.name}
-                                </a>
+                                {module.resources.enroll_needed ? (
+                                  <div className="relative group">
+                                    <span className="text-gray-400 cursor-not-allowed flex items-center">
+                                      <img 
+                                        src={handlePath("/icons/jupyter.svg")}
+                                        alt="Jupyter Notebook" 
+                                        className="w-4 h-4 inline-block mr-2 opacity-50"
+                                      />
+                                      {notebook.name}
+                                    </span>
+                                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-800 text-white text-sm rounded p-2 whitespace-nowrap z-10">
+                                      Please enroll in the course to access this notebook
+                                    </div>
+                                  </div>
+                                ) : (
+                                  <a href={notebook.url} className="text-blue-600 hover:underline flex items-center" target="_blank" rel="noopener">
+                                    <img 
+                                      src={handlePath("/icons/jupyter.svg")}
+                                      alt="Jupyter Notebook" 
+                                      className="w-4 h-4 inline-block mr-2"
+                                    />
+                                    {notebook.name}
+                                  </a>
+                                )}
                               </li>
                             ))}
                           </ul>
