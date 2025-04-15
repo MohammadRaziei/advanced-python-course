@@ -287,7 +287,7 @@ export default function AdvancedPythonCourse() {
       <section id="syllabus" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center mb-12">Course Syllabus</h2>
-          <div className="bg-white rounded-lg shadow overflow-hidden">
+          <div className="bg-white rounded-lg shadow overflow-x-auto">
             <table className="min-w-full divide-y divide-gray-200">
               <thead className="bg-gray-50">
                 <tr>
@@ -303,14 +303,14 @@ export default function AdvancedPythonCourse() {
                       <FontAwesomeIcon icon={module.icon} className="text-blue-600 mr-2" />
                       {module.title}
                     </td>
-                    <td className="px-6 py-4">
+                    <td className="px-6 py-4 whitespace-nowrap">
                       <ul className="list-disc pl-6">
                         {module.topics.map((topic, index) => (
                           <li key={index} className="text-gray-700 mb-2">{topic}</li>
                         ))}
                       </ul>
                     </td>
-                    <td className="px-6 py-4">
+                    <td className="px-6 py-4 whitespace-nowrap">
                       <div className="flex flex-col space-y-2">
                         {module.resources.enroll_needed ? (
                           <div className="relative group">
