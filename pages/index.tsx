@@ -257,7 +257,13 @@ export default function AdvancedPythonCourse() {
               and production-grade development practices.
             </p>
             <div className="flex justify-center space-x-4">
-              <a href="#purchase" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700">
+              <a href="#purchase" className="flex items-center bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700">
+                <img
+                  src="https://hamrah.academy/blog/wp-content/uploads/2023/11/cropped-Academy-Logo-2.png"
+                  alt="Hamrah Academy Logo"
+                  className="h-6 w-6 mr-2"
+                  style={{ filter: "drop-shadow(0px 1px 5px white)" }}
+                />
                 Enroll Now
               </a>
               <a href={repo_url} target="_blank" rel="noopener" className="bg-gray-800 text-white px-8 py-3 rounded-lg hover:bg-gray-900">
