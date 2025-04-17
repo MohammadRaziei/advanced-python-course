@@ -261,8 +261,8 @@ export default function AdvancedPythonCourse() {
                 <img
                   src="https://hamrah.academy/blog/wp-content/uploads/2023/11/cropped-Academy-Logo-2.png"
                   alt="Hamrah Academy Logo"
-                  className="w-5 mr-2"
-                  // style={{ filter: "drop-shadow(0px 1px 5px white)" }}
+                  className="h-5 w-5 mr-2"
+                  style={{ background: "transparent" }}
                 />
                 Enroll Now
               </a>
