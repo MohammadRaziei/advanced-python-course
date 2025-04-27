@@ -216,6 +216,30 @@ const features = [
 ];
 
 
+const relatedMaterials = [
+  {
+    icon: faGithub,
+    title: "Python Project Template",
+    url: "https://github.com/MohammadRaziei/cookiecutter-python-template",
+    linkText: "View on GitHub →",
+    iconColor: "text-gray-800"
+  },
+  {
+    icon: faGithub,
+    title: "Silero VAD Python",
+    url: "https://github.com/MohammadRaziei/silero-vad-python/",
+    linkText: "View on GitHub →",
+    iconColor: "text-gray-800"
+  },
+  {
+    icon: faBook, // Or faLink if you prefer
+    title: "Design Patterns Guide",
+    url: "https://refactoring.guru/design-patterns",
+    linkText: "Visit Refactoring.Guru →",
+    iconColor: "text-blue-600" // Keep the blue color for this one
+  }
+];
+
 export default function AdvancedPythonCourse() {
   return (
     <Loading>
@@ -379,20 +403,34 @@ export default function AdvancedPythonCourse() {
           </div>
         </section>
 
-        {/* Resources Section */}
-        {/* <section id="resources" className="py-20 bg-gray-100">
+        {/* Related Materials Section */}
+        <section id="related-materials" className="py-20 bg-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-center mb-12">Course Resources</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white p-6 rounded-lg shadow">
-                <h3 className="text-xl font-semibold mb-4">Jupyter Notebooks</h3>
-                <a href="https://your-notebook-site.com" target="_blank" rel="noopener" className="text-blue-600 hover:underline">
-                  View Interactive Notebooks →
-                </a>
-              </div>
+            <h2 className="text-3xl font-bold text-center mb-12">Related Materials</h2>
+            {/* Change md:grid-cols-3 to md:grid-cols-2 */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {relatedMaterials.map((material, index) => (
+                <div key={index} className="bg-white p-6 rounded-lg shadow flex items-center space-x-4">
+                  <FontAwesomeIcon icon={material.icon} className={`${material.iconColor} text-3xl flex-shrink-0`} />
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">{material.title}</h3>
+                    <a
+                      href={material.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:underline"
+                    >
+                      {material.linkText}
+                    </a>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-        </section> */}
+        </section>
+
+        {/* Resources Section (Commented out) */}
+        {/* <section id="resources" className="py-20 bg-gray-100"> ... </section> */}
 
         {/* Footer */}
         <footer className="bg-gray-800 text-white py-12">
