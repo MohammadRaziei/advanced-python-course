@@ -240,6 +240,8 @@ const relatedMaterials = [
   }
 ];
 
+const enroll_tooltip_text = "To access these files, please enroll on the Hamrah Academy website.<br /> You will have direct access to the files there."
+
 export default function AdvancedPythonCourse() {
   return (
     <Loading>
@@ -379,9 +381,9 @@ export default function AdvancedPythonCourse() {
                                 <FontAwesomeIcon icon={faGithub} className="mr-2" />
                                 Source Code
                               </span>
-                              <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-800 text-white text-sm rounded p-2 whitespace-nowrap z-10">
-                                Please enroll in the course to access this resource
-                              </div>
+                              <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-800 text-white text-sm rounded p-2 whitespace-nowrap z-10"
+                                dangerouslySetInnerHTML={{ __html: enroll_tooltip_text }}
+                              />
                             </div>
                           ) : (
                             <a href={module.resources.code} className="text-blue-600 hover:underline" target="_blank" rel="noopener">
@@ -404,9 +406,9 @@ export default function AdvancedPythonCourse() {
                                         />
                                         {notebook.name}
                                       </span>
-                                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-800 text-white text-sm rounded p-2 whitespace-nowrap z-10">
-                                        Please enroll in the course to access this notebook
-                                      </div>
+                                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-800 text-white text-sm rounded p-2 whitespace-nowrap z-10"   
+                                        dangerouslySetInnerHTML={{ __html: enroll_tooltip_text }}
+                                      />
                                     </div>
                                   ) : (
                                     <a href={notebook.url} className="text-blue-600 hover:underline flex items-center" target="_blank" rel="noopener">
