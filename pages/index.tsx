@@ -315,8 +315,37 @@ export default function AdvancedPythonCourse() {
               </div>
             </section>
 
+        {/* Meet the Instructor Section */}
+        <section id="instructor" className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
+            {/* Optional: Add instructor image here */}
+            {/* <div className="md:w-1/3 mb-8 md:mb-0 md:mr-12 flex justify-center">
+              <img
+                src='IMAGE_URL_HERE' // Replace with actual image URL
+                alt="Mohammad Raziei"
+                className="rounded-full h-48 w-48 object-cover shadow-lg border-4 border-white"
+              />
+            </div> */}
+            <div className="text-center md:text-left">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet Your Instructor</h2>
+              <h3 className="text-2xl font-semibold text-blue-700 mb-4">Mohammad Raziei</h3>
+              <p className="text-lg text-gray-700 mb-6 text-justify">
+                Mohammad brings extensive experience from the fields of <strong className="text-gray-800">Telecommunications</strong>, <strong className="text-gray-800">Signal Processing</strong>, and <strong className="text-gray-800">Artificial Intelligence</strong>. His passion for teaching and real-world expertise ensures this course covers practical applications, modern tooling, and industry best practices to elevate your Python skills.
+              </p>
+              <a
+                href="https://mohammadraziei.github.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300 shadow hover:shadow-md"
+              >
+                Learn More About Mohammad
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* Syllabus Section */}
-        <section id="syllabus" className="py-20">
+        <section id="syllabus" className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center mb-12">Course Syllabus</h2>
             <div className="bg-white rounded-lg shadow overflow-x-auto">
